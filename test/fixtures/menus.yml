@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  m_name: MyString
+  price: 1
+  allergy: MyString
+  restaurant: one
+
+two:
+  m_name: MyString
+  price: 1
+  allergy: MyString
+  restaurant: two
