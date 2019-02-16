@@ -9,7 +9,7 @@ class UserRegistrationController < ApplicationController
 
       if params['inputName'] then
         @name = params['inputName']
-        
+
       end
 
       if params['gender'] then
@@ -32,7 +32,10 @@ class UserRegistrationController < ApplicationController
           @allergy = "アレルギーを選択して下さい"
         end
       end
-      
+
+      user = User.new(u_name: @name, sex: @gender, age: @old, allergy: @allergy)
+      user.save
+
     else
     end
   end
