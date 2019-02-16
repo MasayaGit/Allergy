@@ -1,0 +1,41 @@
+<h1><%= @title %></h1>
+
+<%= form_tag(controller: "user_registration", action:"index" ) do %>
+    <br>
+    <%= label_tag("text", "お名前")  %>
+    <%= text_field_tag("inputName") %>
+    <br>
+
+    <br>
+    <%= radio_button_tag("gender", "男性") %>
+    <%= label_tag("gender_man", "男性")  %>
+    <%= radio_button_tag("gender", "女性") %>
+    <%= label_tag("gender_woman", "女性")  %>
+    <br>
+
+    <br>
+    <%= label_tag("labelOld", "年代")  %>
+    <%= select_tag("old", options_for_select(['10代未満', '10代', '20代','30代', '40代','50代', '60代','70代以上'])) %>
+    <br>
+
+    <%= label_tag("labelAllergy", "アレルギー")  %>
+    <ul>
+    <li><%= check_box "Allergylist", "卵" %>卵</li>
+    <li><%= check_box "Allergylist", "小麦" %>小麦</li>
+    <li><%= check_box "Allergylist", "乳" %>乳</li>
+    <li><%= check_box "Allergylist", "かに" %>かに</li>
+    <li><%= check_box "Allergylist", "えび" %>えび</li>
+    <li><%= check_box "Allergylist", "そば" %>そば</li>
+    <li><%= check_box "Allergylist", "落花生" %>落花生</li>
+
+  </ul>
+
+  <%= submit_tag("Click")%>
+
+  <p><%= @name %></p>
+  <p><%= @gender %></p>
+  <p><%= @old %></p>
+  <p><%= @allergy %></p>
+
+
+<% end %>
