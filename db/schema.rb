@@ -10,15 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_16_041649) do
-
-  create_table "menus", force: :cascade do |t|
-    
-    t.string "genre"
-    t.string "name"
-    t.integer "price"
-    t.string "allergy"
-
-  end
+ActiveRecord::Schema.define(version: 2019_02_16_054115) do
 
 end
