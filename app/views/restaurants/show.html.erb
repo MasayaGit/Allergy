@@ -14,6 +14,8 @@
     <% @restaurant.menus.each do |menu| %>
     <li>
       <%= menu.m_name %>
+      <%= menu.price %>
+      <%= menu.allergy %>
     </li>
     <% end %>
   </ul>
