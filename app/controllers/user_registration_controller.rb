@@ -2,6 +2,7 @@ class UserRegistrationController < ApplicationController
   def index
     @title = "ユーザー登録"
     @name = '名前を入力して下さい'
+    @passward = 'パスワードを入力して下さい'
     @gender = "性別を選択して下さい"
     @old = "年代を選択して下さい"
     @allergy = "アレルギーを選択して下さい"
@@ -9,6 +10,11 @@ class UserRegistrationController < ApplicationController
 
       if params['inputName'] then
         @name = params['inputName']
+
+      end
+
+      if params['inputPassward'] then
+        @passward = params['inputPassward']
 
       end
 
@@ -33,7 +39,7 @@ class UserRegistrationController < ApplicationController
         end
       end
 
-      user = User.new(u_name: @name, sex: @gender, age: @old, allergy: @allergy)
+      user = User.new(u_name: @name,passward: @passward,sex: @gender, age: @old, allergy: @allergy)
       user.save
 
     else
