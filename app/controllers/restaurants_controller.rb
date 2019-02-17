@@ -5,7 +5,7 @@ class RestaurantsController < ApplicationController
 
     def show
       @restaurant = Restaurant.find(params[:id])
-      @allergys = User.find(2).allergy
+      @allergy = User.find(2).allergy.split(",")
       # @time = Time.now.to_s
       # 実際はログイン情報からとる
     end
