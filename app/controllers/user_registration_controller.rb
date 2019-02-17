@@ -32,8 +32,10 @@ class UserRegistrationController < ApplicationController
         params['Allergylist'].each do |di1,di2|
           if di2 == "1"
           @allergy += di1
+          @allergy += ","
           end
         end
+        @allergy.chop!
         if @allergy == ""
           @allergy = "アレルギーを選択して下さい"
         end
