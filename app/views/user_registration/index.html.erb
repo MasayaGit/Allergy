@@ -2,8 +2,13 @@
 
 <%= form_tag(controller: "user_registration", action:"index" ) do %>
     <br>
-    <%= label_tag("text", "お名前")  %>
+    <%= label_tag("Nametext", "お名前")  %>
     <%= text_field_tag("inputName") %>
+    <br>
+
+    <br>
+    <%= label_tag("PassWardtext", "パスワード")  %>
+    <%= text_field_tag("inputPassward") %>
     <br>
 
     <br>
@@ -33,6 +38,7 @@
   <%= submit_tag("Click")%>
 
   <p><%= @name %></p>
+  <p><%= @passward %></p>
   <p><%= @gender %></p>
   <p><%= @old %></p>
   <p><%= @allergy %></p>

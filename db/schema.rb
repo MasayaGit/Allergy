@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_16_164858) do
+ActiveRecord::Schema.define(version: 2019_02_17_084342) do
 
   create_table "menus", force: :cascade do |t|
     t.string "m_name"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2019_02_16_164858) do
     t.string "allergy"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "passward"
   end
 
 end
