@@ -1,0 +1,32 @@
+<h1><%= @title %></h1>
+
+<%= form_tag(controller: "user", action:"index" ) do %>
+	<br>
+    <%= label_tag("Nametext", "お名前")  %>
+    <%= text_field_tag("inputName") %>
+    <br>
+
+    <br>
+    <%= label_tag("PassWardtext", "パスワード")  %>
+    <%= text_field_tag("inputPassward") %>
+    <br>
+
+	<%= submit_tag("Click")%>
+	<p><%=@name%></p>
+	<p><%=@passward%></p>
+	<table>
+    	<tr>
+			<th>Id</th><th>Name</th><th>passward</th><th>sex</th><th>age</th><th>allergy</th>
+		</tr>
+		<% @userdata.each do |obj| %>
+		<tr>
+        	<td><%= obj.id %></td>
+			<td><%= obj.u_name %></td>
+			<td><%= obj.passward %></td>
+        	<td><%= obj.sex %></td>
+        	<td><%= obj.age %></td>
+        	<td><%= obj.allergy %></td>
+		</tr>
+		<% end %>
+	</table>
+<% end %>
