@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+.logo {
+  width: 200px;
+  height: 100px;
+  text-align: left;
+}
+.icon {
+  width: 200px;
+  height: 100px;
+  text-align: right;
+}

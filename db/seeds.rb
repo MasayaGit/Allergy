@@ -44,3 +44,7 @@ Menu.create(m_name:"キャベツ", price:250, allergy:"小麦", restaurant_id:9)
 Menu.create(m_name:"カレーライス", price:450, allergy:"小麦", restaurant_id:10)
 Menu.create(m_name:"マンゴーラッシー", price:250, allergy:"乳", restaurant_id:10)
 Menu.create(m_name:"ナン", price:500, allergy:"小麦", restaurant_id:10 )
+
+User.create(u_name:"ぬぶ", passward:"nubu", sex:"男性", age:"20代", allergy:"卵")
+User.create(u_name:"どぶ", passward:"dobu", sex:"男性", age:"30代", allergy:"卵小麦落花生乳")
+User.create(u_name:"びぶ", passward:"bibu", sex:"女性", age:"10代", allergy:"")

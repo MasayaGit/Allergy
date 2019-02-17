@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  
+
+  get 'homes/index'
   get 'user_registration/index'
   get 'user_registration',to: 'user_registration#index'
   post 'user_registration/index'
@@ -10,5 +11,7 @@ Rails.application.routes.draw do
   resources :restaurants do
     resources :menus
   end
-  
+
+  root 'homes#index'
+
 end
