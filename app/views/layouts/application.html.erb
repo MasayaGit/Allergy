@@ -10,8 +10,8 @@
   </head>
 
   <body>
-    <h1><%= link_to image_tag('logo.png', class: 'logo'), root_path %></h1>
-    
+    <%= link_to image_tag('logo.png', class: 'logo'), root_path %>
+    <%= link_to image_tag('icon.png', class: 'icon'), user_registration_path %>
     <%= yield %>
   </body>
 </html>
