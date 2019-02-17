@@ -12,13 +12,32 @@
 <% if @restaurant.menus.any? %>
   <ul>
     <% @restaurant.menus.each do |menu| %>
-    <li>
-      <%= menu.m_name %>
-      <%= menu.price %>
-      <%= menu.allergy %>
-    </li>
+      <% flag = false %>
+      <% r_allergys = menu.allergy.split(',') %>
+      <% u_allergys = @allergys.split(',') %>
+
+      <% r_allergys.each do |r| %>
+        <% u_allergys.each do |u| %>
+
+          <% if r == u || r == u + "\u0010" %>
+            <li>
+              <span style="background-color:red">
+                <%= menu.m_name %>
+                <%= menu.allergy %>
+                <%= menu.price %>
+                <% flag = true %>
+              </span>
+            </li>
+          <% end %>
+        <% end %>
+      <% end %>
+      <% if flag == false %>
+        <li>
+          <%= menu.m_name %>
+          <%= menu.allergy %>
+          <%= menu.price %>
+        </li>
+      <% end %>
     <% end %>
   </ul>
 <% end %>
-
-<%= link_to "戻る", restaurants_path %>
