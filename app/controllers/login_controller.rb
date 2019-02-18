@@ -1,6 +1,6 @@
 class LoginController < ApplicationController
   def index
-
+    
     if request.post? then
       @name = params['inputName']
       @password = params['inputPassword']

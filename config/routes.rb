@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'mypage/index'
   get 'login/index'
   post 'login/index'
   
