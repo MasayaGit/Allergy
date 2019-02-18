@@ -12,14 +12,13 @@
     <br>
 
     <br>
-    <%= radio_button_tag("gender", "男性") %>
-    <%= label_tag("gender_man", "男性")  %>
-    <%= radio_button_tag("gender", "女性") %>
-    <%= label_tag("gender_woman", "女性")  %>
-    <br>
+
 
     <br>
-    <%= label_tag("labelOld", "年代")  %>
+    <%= label_tag("labelSex", "性別")  %>
+    <%= select_tag("old", options_for_select(['男性','女性','その他'])) %>
+
+    <%= label_tag("labelOld", "年齢")  %>
     <%= select_tag("old", options_for_select(['10代未満', '10代', '20代','30代', '40代','50代', '60代','70代以上'])) %>
     <br>
 

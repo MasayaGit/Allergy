@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
   def index
     if session[:user]
-      @usr = User.find_by(u_name:session[:user])
+      @user = User.find_by(u_name:session[:user])
     else
       redirect_to login_index_path
     end
@@ -16,7 +16,7 @@ class RestaurantsController < ApplicationController
         ma = menu.allergy.split(",") #ma -> menu allergy
         ma.each do |m|
           flag = false
-          ua = @usr.allergy.split(",") #ua -> user a;lergy
+          ua = @user.allergy.split(",") #ua -> user a;lergy
           ua.each do |u|
             if(m == u && flag == false)
               count += 1
@@ -34,6 +34,9 @@ class RestaurantsController < ApplicationController
   end
 
     def show
+      if session[:user] == nil
+        redirect_to login_index_path
+      end
       @usr = User.find_by(u_name:session[:user])
       @restaurant = Restaurant.find(params[:id])
       @allergy = @usr.allergy.split(",")
