@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'login/index'
   post 'login/index'
-
+  
   get 'homes/index'
   get 'user_registration/index'
   get 'user_registration',to: 'user_registration#index'
