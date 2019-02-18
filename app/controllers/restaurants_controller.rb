@@ -12,8 +12,6 @@ class RestaurantsController < ApplicationController
       @usr = User.find_by(u_name:session[:user])
       @restaurant = Restaurant.find(params[:id])
       @allergy = @usr.allergy.split(",")
-
-      # 実際はログイン情報からとる
     end
 
 end
