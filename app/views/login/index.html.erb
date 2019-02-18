@@ -1,0 +1,13 @@
+<h2>ログイン</h2>
+
+<%= form_tag(controller: "login", action:"index") do %>
+
+  <p>お名前</p>
+  <%= text_field_tag("inputName") %>
+  <br>
+  <p>パスワード</p>
+  <%= text_field_tag("inputPassword") %>
+  <br>
+  <%= submit_tag("Click")%>
+<% end %>
+<%= @msg %>
