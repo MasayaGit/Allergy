@@ -9,16 +9,33 @@
 </ul>
 
 <h3>メニュー</h3>
-<% if @restaurant.menus.any? %>
-  <ul>
-    <% @restaurant.menus.each do |menu| %>
+
+<% @restaurant.menus.each do |menu| %>
+
+  <% flag = false %>
+  <% r_all = menu.allergy.split(",") %>
+  <% u_all = @allergy %>
+
+  <% r_all.each do |r| %>
+    <% u_all.each do |u| %>
+      <% if r == u || r == u + "\u0010" %>
+        <li>
+          <span style="background-color:red">
+            <%= menu.m_name %>
+          </span>
+            <%= menu.allergy %>
+            <%= menu.price %>
+
+            <% flag = true %>
+        </li>
+      <% end %>
+    <% end %>
+  <% end %>
+  <% if flag == false %>
     <li>
       <%= menu.m_name %>
-      <%= menu.price %>
       <%= menu.allergy %>
+      <%= menu.price %>
     </li>
-    <% end %>
-  </ul>
+  <% end %>
 <% end %>
-
-<%= link_to "戻る", restaurants_path %>
