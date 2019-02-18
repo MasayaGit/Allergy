@@ -12,13 +12,15 @@
 
 <% @restaurant.menus.each do |menu| %>
 
-  <% flag = false %>
-  <% r_all = menu.allergy.split(",") %>
+
+  <% m_all = menu.allergy.split(",") %>
   <% u_all = @allergy %>
 
-  <% r_all.each do |r| %>
+  <% flag = false %>
+
+  <% m_all.each do |m| %>
     <% u_all.each do |u| %>
-      <% if r == u || r == u + "\u0010" %>
+      <% if m == u && flag == false %>
         <li>
           <span style="background-color:red">
             <%= menu.m_name %>
