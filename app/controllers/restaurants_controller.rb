@@ -33,12 +33,6 @@ class RestaurantsController < ApplicationController
       end
       @wariai.push(menu_count.to_s + "品中" + count.to_s + "品にアレルギー成分が含まれています")
 
-      if menu_count == count
-        @showFlag.push(true)
-      else
-        @showFlag.push(false)
-      end
-
     end
   end
 
