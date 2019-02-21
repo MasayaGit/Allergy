@@ -6,11 +6,6 @@
   <% @restaurants.each do |r| %>
   
   <li>
-    <% if @showFlag[i] %>
-    <% i += 1 %>
-    <% break %>
-    <% end %>
-
     <%= link_to r.r_name, restaurant_path(r) %>
     <%= r.address %>
     <%= r.genre %>
