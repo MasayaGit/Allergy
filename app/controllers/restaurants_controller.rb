@@ -9,7 +9,7 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all.order(created_at: 'asc')
 
     @wariai = []
-    @showFlag = []
+    @percentage = []
 
     @restaurants.each do |restaurant|
       menu_count = restaurant.menus.size
@@ -32,7 +32,7 @@ class RestaurantsController < ApplicationController
         end
       end
       @wariai.push(menu_count.to_s + "品中" + count.to_s + "品にアレルギー成分が含まれています")
-
+      @percentage.push(((count.to_f / menu_count.to_f).round(1)*100).to_i)
     end
   end
 
