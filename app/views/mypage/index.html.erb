@@ -1,3 +1,5 @@
+
+
 <h2>My Page</h2>
 
 名前:
@@ -12,3 +14,65 @@
 アレルギー
 <%= @user.allergy %>
 <br>
+
+
+
+
+
+
+
+<div class="tamago">
+<% if @tamagoFlag == false %>
+    <%= image_tag("blackimage.png", class: 'tamago',:size => "60x60")%>
+<% else %>
+    <%= image_tag("tamago.png", class: 'tamago',:size => "60x60")%>
+<% end %>
+</div>
+
+<div class="komugi">
+<% if @komugiFlag == false %>
+    <%= image_tag("blackimage.png", class: 'komugi',:size => "60x60")%>
+<% else %>
+    <%= image_tag("komugi.png", class: 'komugi',:size => "60x60")%>
+<% end %>
+</div>
+
+<div class="milk">
+<% if @milkFlag == false %>
+    <%= image_tag("blackimage.png", class: 'milk',:size => "60x60")%>
+<% else %>
+    <%= image_tag("milk.png", class: 'milk',:size => "60x60")%>
+<% end %>
+</div>
+
+<div class="tamgo">
+<% if @kaniFlag == false %>
+    <%= image_tag("blackimage.png", class: 'kani',:size => "60x60")%>
+<% else %>
+    <%= image_tag("kani.png", class: 'kani',:size => "60x60")%>
+<% end %>
+</div>
+
+<div class="tamgo">
+<% if @ebiFlag == false %>
+    <%= image_tag("blackimage.png", class: 'ebi',:size => "60x60")%>
+<% else %>
+    <%= image_tag("ebi.png", class: 'ebi',:size => "60x60")%>
+<% end %>
+</div>
+
+<div class="tamgo">
+<% if @sobaFlag == false %>
+    <%= image_tag("blackimage.png", class: 'soba',:size => "60x60")%>
+<% else %>
+    <%= image_tag("soba.png", class: 'soba',:size => "60x60")%>
+<% end %>
+</div>
+
+<div class="tamgo">
+<% if @peanutFlag == false %>
+    <%= image_tag("blackimage.png", class: 'peanut',:size => "60x60")%>
+<% else %>
+    <%= image_tag("peanut.png", class: 'peanut',:size => "60x60")%>
+<% end %>
+</div>
