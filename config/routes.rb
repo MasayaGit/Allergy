@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   get 'mypage/index'
+  get 'mypage',to: 'mypage#index'
+  
   get 'login/index'
   post 'login/index'
   
@@ -14,6 +16,7 @@ Rails.application.routes.draw do
   get 'user',to: 'user#index'
   post 'user/index'
   post 'user', to: 'user#index'
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

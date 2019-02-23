@@ -1,0 +1,16 @@
+<nav class="white">
+    <div class="header">
+    
+      <ul id="links" class="left hide-on-med-and-down">
+          <li><%= link_to image_tag('logo.png', class: 'logo',:size => "60x60"), root_path %></li>
+          <li><%= link_to "SHOW", user_registration_path,:style=>"color:black;"%></li>
+          <li><%= link_to "MAP",user_registration_path,:style=>"color:black;" %></li>
+      </ul>
+     
+
+      <ul id="links" class="right hide-on-med-and-down">
+          <li><%= link_to image_tag('user.png', class: 'user',:size => "60x60"), mypage_path %></li>
+          <li><%= link_to image_tag('bell.png', class: 'user',:size => "60x60") %></li>
+      </ul>
+    </div>
+</nav>
