@@ -1,22 +1,25 @@
 <%= render template: 'layouts/header'%>
 
-<h2>
-  Restaurant List
-</h2>
+<div class = main>
 
-<ul>
-  <% i = 0 %>
-  <% @restaurants.each do |r| %>
+  <h2>
+    Restaurant List
+  </h2>
   
-  <li>
-    <%= link_to r.r_name, restaurant_path(r) %>
-    <%= r.address %>
-    <%= r.genre %>
-    <%= @percentage[i]%>
-  </li>
+  <ul>
+    <% i = 0 %>
+    <% @restaurants.each do |r| %>
+    
+    <li>
+      <%= link_to r.r_name, restaurant_path(r) %>
+      <%= r.address %>
+      <%= r.genre %>
+      <%= @percentage[i]%>
+    </li>
 
-  <%= @wariai[i] %>
-  <% i += 1 %>
-  <% end %>
+    <%= @wariai[i] %>
+    <% i += 1 %>
+    <% end %>
+  </ul>
 
-</ul>
+</div>
