@@ -3,12 +3,30 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
 div.name{
     text-align:center;
-    top: 500px;
+    top: 50px;
     right: 1000px;
 }
+
+div.age{
+    text-align:center;
+    top: 100px;
+    right: 1000px;
+}
+
+div.sex{
+    text-align:center;
+    top: 150px;
+    right: 1000px;
+}
+
+div.text{
+    text-align:center;
+    top: 200px;
+    right: 1000px;
+}
+
 
 div.tamago{
     text-align:center;

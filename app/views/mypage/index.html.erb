@@ -1,78 +1,77 @@
+<%= render template: 'layouts/header'%>
 
+<div class = "main"> 
 
-<h2>My Page</h2>
+    <div class="name">
+        <%= @user.u_name + "様" %>
+    </div>
 
-名前:
-<%= @user.u_name %>
-<br>
-年齢:
-<%= @user.age %>
-<br>
-性別:
-<%= @user.sex %>
-<br>
-アレルギー
-<%= @user.allergy %>
-<br>
+    <div class="age">
+        <%= @user.age%>
+    </div>
 
+    <div class="sex">
+        <%= @user.sex%>
+    </div>
 
+    <div class="text">
+        <%= "該当アレルギー　一覧"%>
+    </div>
 
+    <div class="tamago">
+        <% if @tamagoFlag == false %>
+            <%= image_tag("blackimage.png", class: 'tamago',:size => "60x60")%>
+        <% else %>
+            <%= image_tag("tamago.png", class: 'tamago',:size => "60x60")%>
+        <% end %>
+    </div>
 
+    <div class="komugi">
+        <% if @komugiFlag == false %>
+            <%= image_tag("blackimage.png", class: 'komugi',:size => "60x60")%>
+        <% else %>
+            <%= image_tag("komugi.png", class: 'komugi',:size => "60x60")%>
+        <% end %>
+    </div>
 
+    <div class="milk">
+        <% if @milkFlag == false %>
+            <%= image_tag("blackimage.png", class: 'milk',:size => "60x60")%>
+        <% else %>
+            <%= image_tag("milk.png", class: 'milk',:size => "60x60")%>
+        <% end %>
+    </div>
 
+    <div class="tamgo">
+        <% if @kaniFlag == false %>
+            <%= image_tag("blackimage.png", class: 'kani',:size => "60x60")%>
+        <% else %>
+            <%= image_tag("kani.png", class: 'kani',:size => "60x60")%>
+        <% end %>
+    </div>
 
-<div class="tamago">
-<% if @tamagoFlag == false %>
-    <%= image_tag("blackimage.png", class: 'tamago',:size => "60x60")%>
-<% else %>
-    <%= image_tag("tamago.png", class: 'tamago',:size => "60x60")%>
-<% end %>
-</div>
+    <div class="tamgo">
+        <% if @ebiFlag == false %>
+            <%= image_tag("blackimage.png", class: 'ebi',:size => "60x60")%>
+        <% else %>
+            <%= image_tag("ebi.png", class: 'ebi',:size => "60x60")%>
+        <% end %>
+    </div>
 
-<div class="komugi">
-<% if @komugiFlag == false %>
-    <%= image_tag("blackimage.png", class: 'komugi',:size => "60x60")%>
-<% else %>
-    <%= image_tag("komugi.png", class: 'komugi',:size => "60x60")%>
-<% end %>
-</div>
+    <div class="tamgo">
+        <% if @sobaFlag == false %>
+            <%= image_tag("blackimage.png", class: 'soba',:size => "60x60")%>
+        <% else %>
+            <%= image_tag("soba.png", class: 'soba',:size => "60x60")%>
+        <% end %>
+    </div>
 
-<div class="milk">
-<% if @milkFlag == false %>
-    <%= image_tag("blackimage.png", class: 'milk',:size => "60x60")%>
-<% else %>
-    <%= image_tag("milk.png", class: 'milk',:size => "60x60")%>
-<% end %>
-</div>
-
-<div class="tamgo">
-<% if @kaniFlag == false %>
-    <%= image_tag("blackimage.png", class: 'kani',:size => "60x60")%>
-<% else %>
-    <%= image_tag("kani.png", class: 'kani',:size => "60x60")%>
-<% end %>
-</div>
-
-<div class="tamgo">
-<% if @ebiFlag == false %>
-    <%= image_tag("blackimage.png", class: 'ebi',:size => "60x60")%>
-<% else %>
-    <%= image_tag("ebi.png", class: 'ebi',:size => "60x60")%>
-<% end %>
-</div>
-
-<div class="tamgo">
-<% if @sobaFlag == false %>
-    <%= image_tag("blackimage.png", class: 'soba',:size => "60x60")%>
-<% else %>
-    <%= image_tag("soba.png", class: 'soba',:size => "60x60")%>
-<% end %>
-</div>
-
-<div class="tamgo">
-<% if @peanutFlag == false %>
-    <%= image_tag("blackimage.png", class: 'peanut',:size => "60x60")%>
-<% else %>
-    <%= image_tag("peanut.png", class: 'peanut',:size => "60x60")%>
-<% end %>
+    <div class="tamgo">
+        <% if @peanutFlag == false %>
+            <%= image_tag("blackimage.png", class: 'peanut',:size => "60x60")%>
+        <% else %>
+            <%= image_tag("peanut.png", class: 'peanut',:size => "60x60")%>
+        <% end %>
+    </div>
+    
 </div>

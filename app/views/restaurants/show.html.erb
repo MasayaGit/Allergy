@@ -1,46 +1,63 @@
 <%= render template: 'layouts/header'%>
 
+<div class = main>
 
-<h2><%= @restaurant.r_name %></h2>
-<ul>
-  <li>
-    <%= @restaurant.address %>
-  </li>
-  <li>
-    <%= @restaurant.genre %>
-  </li>
-</ul>
-
-<h3>メニュー</h3>
-
-<% @restaurant.menus.each do |menu| %>
-
-
-  <% m_all = menu.allergy.split(",") %>
-  <% u_all = @allergy %>
-
-  <% flag = false %>
-
-  <% m_all.each do |m| %>
-    <% u_all.each do |u| %>
-      <% if m == u && flag == false %>
-        <li>
-          <span style="background-color:red">
-            <%= menu.m_name %>
-          </span>
-            <%= menu.allergy %>
-            <%= menu.price %>
-
-            <% flag = true %>
-        </li>
-      <% end %>
-    <% end %>
-  <% end %>
-  <% if flag == false %>
+  <h2><%= @restaurant.r_name %></h2>
+  <ul>
     <li>
-      <%= menu.m_name %>
-      <%= menu.allergy %>
-      <%= menu.price %>
+      <%= @restaurant.address %>
     </li>
-  <% end %>
-<% end %>
+    <li>
+      <%= @restaurant.genre %>
+    </li>
+  </ul>
+
+  <h3>メニュー</h3>
+
+
+  <table>
+          <thead>
+            <tr>
+                <th>image</th>
+                <th>Name</th>
+                <th>Item Name</th>
+                <th>Item Price</th>
+            </tr>
+          </thead>
+
+      <tbody>
+      <% @restaurant.menus.each do |menu| %>
+
+
+        <% m_all = menu.allergy.split(",") %>
+        <% u_all = @allergy %>
+
+        <% flag = false %>
+
+        <% m_all.each do |m| %>
+          <% u_all.each do |u| %>
+            <% if m == u && flag == false %>
+              <span style="background-color:red">
+                <tr bgcolor = "#cccccc">
+                    <td><%= image_tag("tamago.png", class: 'tamago',:size => "60x60")%></td>
+                    <td><%= menu.m_name %></td>
+                    <td><%= menu.allergy %></td>
+                    <td><%= menu.price %></td>
+                </tr>
+              </span>
+              <% flag = true %>
+            <% end %>
+          <% end %>
+        <% end %>
+        <% if flag == false %>
+            <tr>
+              <td><%= image_tag("tamago.png", class: 'tamago',:size => "60x60")%></td>
+              <td><%= menu.m_name %></td>
+              <td><%= menu.allergy %></td>
+              <td><%= menu.price %></td>
+            </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
