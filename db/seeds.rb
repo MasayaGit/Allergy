@@ -16,6 +16,7 @@ Restaurant.create(r_name:"心さい橋", address:"大阪府東大阪市稲葉4-4
 Restaurant.create(r_name:"アルベロベッロ", address:"大阪府枚方市西招提町897-1", genre:"イタリアン")
 Restaurant.create(r_name:"ガーガーバード", address:"大阪府堺市西区浜寺諏訪森町西4-249-16", genre:"焼き鳥")
 Restaurant.create(r_name:"Soco壱", address:"大阪府大阪市港区築港2-438-8", genre:"カレーライス")
+Restaurant.create(r_name:"Cafeteria November", address:"大阪府東大阪市小若江3-4-1", genre:"学食")
 
 Menu.create(m_name:"ざるうどん", price:350, allergy:"小麦", restaurant_id:1)
 Menu.create(m_name:"えびの天ぷら", price:100, allergy:"小麦,えび", restaurant_id:1)
@@ -52,4 +53,31 @@ Menu.create(m_name:"キャベツ", price:250, allergy:"小麦", restaurant_id:9)
 
 Menu.create(m_name:"カレーライス", price:450, allergy:"小麦", restaurant_id:10)
 Menu.create(m_name:"マンゴーラッシー", price:250, allergy:"乳", restaurant_id:10)
-Menu.create(m_name:"ナン", price:500, allergy:"小麦", restaurant_id:10 )
+Menu.create(m_name:"ナン", price:500, allergy:"小麦", restaurant_id:10)
+
+Menu.create(m_name:"ピリ辛サーモン丼", price:432, allergy:"小麦,乳,卵", restaurant_id:11) # 大豆，鶏肉，豚肉，さけ，さば，ゴマ
+Menu.create(m_name:"カレーライス", price:280, allergy:"小麦", restaurant_id:11) # 大豆，鶏肉，豚肉，りんご，ゴマ
+Menu.create(m_name:"ホワイトカレー", price:378, allergy:"小麦,乳,卵", restaurant_id:11) # 大豆，鶏肉，オレンジ
+Menu.create(m_name:"カンカカレー", price:432, allergy:"小麦", restaurant_id:11) # 牛肉，鶏肉，大豆，りんご，ゼラチン
+Menu.create(m_name:"塩ラーメン", price:345, allergy:"小麦,乳,卵", restaurant_id:11) # 大豆，鶏肉，豚肉，りんご，ゼラチン，ゴマ
+Menu.create(m_name:"味噌ラーメン", price:345, allergy:"小麦,乳,卵", restaurant_id:11) # 大豆，鶏肉，豚肉，りんご
+Menu.create(m_name:"かけうどん", price:172, allergy:"小麦", restaurant_id:11) # 大豆，さば，ゴマ
+Menu.create(m_name:"かけそば", price:172, allergy:"小麦,卵,そば", restaurant_id:11) # 大豆，さば，ゴマ
+Menu.create(m_name:"かき揚げうどん", price:259, allergy:"小麦", restaurant_id:11) # 大豆，さば，ゴマ
+Menu.create(m_name:"かき揚げそば", price:259, allergy:"小麦,卵,そば", restaurant_id:11) # 大豆，さば，ゴマ
+Menu.create(m_name:"きつねうどん", price:216, allergy:"小麦", restaurant_id:11) # 大豆，さば，ゴマ
+Menu.create(m_name:"きつねそば", price:216, allergy:"小麦,卵,そば", restaurant_id:11) # 大豆，さば，ゴマ
+Menu.create(m_name:"ライス", price:113, allergy:"", restaurant_id:11)
+Menu.create(m_name:"味噌汁", price:32, allergy:"", restaurant_id:11) # 大豆
+Menu.create(m_name:"ポテト野菜サラダ", price:108, allergy:"卵", restaurant_id:11) # 大豆
+Menu.create(m_name:"近大唐揚げ", price:302, allergy:"小麦,乳", restaurant_id:11) # 大豆，鶏肉
+Menu.create(m_name:"ダッカルビ風野菜炒め", price:259, allergy:"小麦", restaurant_id:11) # 大豆，鶏肉，りんご，ゴマ
+Menu.create(m_name:"ハンバーグコンボ", price:432, allergy:"小麦,乳,卵,えび", restaurant_id:11) # 牛肉，鶏肉，豚肉，大豆，ゴマ
+Menu.create(m_name:"ローストンカツごまソース", price:259, allergy:"小麦,乳,卵", restaurant_id:11) # 大豆，豚肉，りんご，ゴマ
+Menu.create(m_name:"白身魚フライ", price:259, allergy:"小麦,卵", restaurant_id:11) # 大豆
+Menu.create(m_name:"野菜食べチャイナスープ", price:108, allergy:"小麦", restaurant_id:11) # 大豆，鶏肉，さば，ゼラチン，ゴマ
+Menu.create(m_name:"大根牛すじ煮", price:172, allergy:"小麦", restaurant_id:11) # 大豆，牛肉，さば
+Menu.create(m_name:"カレーパン", price:150, allergy:"乳,卵", restaurant_id:11) # 大豆，牛肉，豚肉
+Menu.create(m_name:"あんドーナツ", price:150, allergy:"乳,卵", restaurant_id:11) # 大豆
+Menu.create(m_name:"北海道いももち", price:86, allergy:"小麦,乳", restaurant_id:11) # 大豆
+Menu.create(m_name:"フルーツヨーグルト", price:108, allergy:"乳", restaurant_id:11) # もも
